@@ -7,6 +7,9 @@
 #include "maxTouch/maxTouch.h"
 #include "tfont.h"
 #include "digital521.h"
+#include "image1.h"
+#include "image2.h"
+#include "image3.h"
 
 /************************************************************************/
 /* prototypes                                                           */
@@ -57,19 +60,6 @@ typedef struct {
 	uint32_t x;         // posicao x
 	uint32_t y;         // posicao y
 } t_but;
-
-
-// typedef struct {
-// 	const uint8_t *data;
-// 	uint16_t width;
-// 	uint16_t height;
-// 	uint8_t dataSize;
-// } tImage;
-
-#include "image1.h"
-#include "image2.h"
-#include "image3.h"
-
 
 
 void but0_callback(t_but *b);
