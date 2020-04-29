@@ -1,0 +1,42 @@
+<svg width="580" height="400" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect id="svg_1" height="175" width="113" y="82.453125" x="39.5" stroke-width="1.5" stroke="#000" fill="#fff"/>
+  <ellipse stroke="#000" id="svg_4" cy="105.453125" cx="117.5" stroke-width="1.5" fill="#fff"/>
+  <text stroke="#000" transform="matrix(2.7964911460876465,0,0,1,-258.4420934692025,0) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_5" y="100.453125" x="130.5" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#000000"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_7" y="110.453125" x="69.5" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">LCD</text>
+  <ellipse ry="5.5" rx="6.5" id="svg_9" cy="163.953125" cx="60" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_10" y="170.453125" x="77.5" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">Touch</text>
+  <line stroke="#000" stroke-linecap="null" stroke-linejoin="null" id="svg_11" y2="142.453125" x2="193.5" y1="166.453125" x1="144.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_13" y2="143.453125" x2="193.5" y1="170.453125" x1="185.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  <line transform="rotate(93.84886932373047 179.7413787841797,137.6427764892578) " stroke="#000" stroke-linecap="null" stroke-linejoin="null" id="svg_14" y2="124.14278" x2="183.741379" y1="151.14278" x1="175.741379" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="none"/>
+  <text stroke="#000" transform="matrix(11.98938222960578,0,0,6.104395563420439,-3690.938942528031,-930.6008261966458) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_15" y="186.453125" x="326.5" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#000000"/>
+  <text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="15" id="svg_16" y="142.453125" x="211.5" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">1. send QueueTouch from task_mxt to task_lcd.</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="15" id="svg_17" y="170.453125" x="214.5" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">2.send command to xQueueCommand</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_18" y="172.453125" x="411.5" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="15" id="svg_19" y="193.453125" x="212.5" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">3. Activate task led</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_20" y="200.453125" x="50.5" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">detected</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="15" id="svg_22" y="336.453125" x="83.534481" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">task_mxt</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="15" id="svg_23" y="336.453125" x="295.534481" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">task_execute</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="15" id="svg_24" y="336.453125" x="196.534481" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">task_lcd</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="15" id="svg_25" y="335.901401" x="423.913791" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">task_led</text>
+  <line stroke="#000" stroke-linecap="null" stroke-linejoin="null" id="svg_28" y2="334.073815" x2="181.224136" y1="334.073815" x1="154.224136" fill-opacity="null" stroke-opacity="null" fill="none"/>
+  <line transform="rotate(82.50411224365234 -2.0689654350280757,2.0689654350280757) " stroke-linecap="null" stroke-linejoin="null" id="svg_29" y2="332.036648" x2="150.344828" y1="321.691821" x1="139.310345" fill-opacity="null" stroke-opacity="null" stroke-width="null" stroke="#000" fill="none"/>
+  <line transform="rotate(-179.00770568847656 177.24121093750003,328.2435607910157) " stroke-linecap="null" stroke-linejoin="null" id="svg_30" y2="333.415959" x2="182.758619" y1="323.071131" x1="171.724136" fill-opacity="null" stroke-opacity="null" stroke-width="null" stroke="#000" fill="none"/>
+  <line transform="rotate(-97.32527160644531 178.62051391601557,339.9677124023437) " stroke-linecap="null" stroke-linejoin="null" id="svg_31" y2="345.140096" x2="184.137929" y1="334.795269" x1="173.103446" fill-opacity="null" stroke-opacity="null" stroke-width="null" stroke="#000" fill="none"/>
+  <line stroke="#000" stroke-linecap="null" stroke-linejoin="null" id="svg_41" y2="334.073815" x2="283.293094" y1="334.073815" x1="256.293094" fill-opacity="null" stroke-opacity="null" fill="none"/>
+  <line transform="rotate(-179.00770568847656 279.31015014648443,328.2435607910157) " stroke-linecap="null" stroke-linejoin="null" id="svg_42" y2="333.415959" x2="284.827577" y1="323.071131" x1="273.793094" fill-opacity="null" stroke-opacity="null" stroke-width="null" stroke="#000" fill="none"/>
+  <line transform="rotate(-97.32527160644531 280.6894836425782,339.9677124023438) " stroke-linecap="null" stroke-linejoin="null" id="svg_43" y2="345.140096" x2="286.206887" y1="334.795269" x1="275.172404" fill-opacity="null" stroke-opacity="null" stroke-width="null" stroke="#000" fill="none"/>
+  <line stroke="#000" stroke-linecap="null" stroke-linejoin="null" id="svg_44" y2="334.073815" x2="415.017223" y1="334.073815" x1="388.017223" fill-opacity="null" stroke-opacity="null" fill="none"/>
+  <line transform="rotate(-179.00770568847656 411.03649902343756,328.2435607910157) " stroke-linecap="null" stroke-linejoin="null" id="svg_45" y2="333.415959" x2="416.551706" y1="323.071131" x1="405.517223" fill-opacity="null" stroke-opacity="null" stroke-width="null" stroke="#000" fill="none"/>
+  <line transform="rotate(-97.32527160644531 412.4158325195313,339.9677124023438) " stroke-linecap="null" stroke-linejoin="null" id="svg_46" y2="345.140096" x2="417.931016" y1="334.795269" x1="406.896533" fill-opacity="null" stroke-opacity="null" stroke-width="null" stroke="#000" fill="none"/>
+ </g>
+</svg>
