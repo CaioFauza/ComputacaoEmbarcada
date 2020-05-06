@@ -25,7 +25,13 @@
 
 #define NUM_TAPS   12  // ordem do filtro (quantos coefientes)
 #define BLOCK_SIZE 1   // se será processado por blocos, no caso não.
+#define MATH_PI 3.14159265358979323846
 
+
+typedef struct {
+	double x;
+	double y;
+} coords;
 
 const float32_t firCoeffs32[NUM_TAPS] ={
 	0.07930125683894955,
@@ -315,6 +321,16 @@ void task_mxt(void){
   }
 }
 
+coords get_coords(int radius, int value){
+	coords values;
+	values.x = radius*sin((value*2*MATH_PI)/4095);
+	values.y = radius*cos((value*2*MATH_PI)/4095);
+	
+	
+	return values;
+}
+
+
 void task_lcd(void){
   xQueueTouch = xQueueCreate( 10, sizeof( touchData ) );
   xQueuePlot = xQueueCreate( 10, sizeof( t_plot ) );
@@ -328,29 +344,31 @@ void task_lcd(void){
   t_plot plot;
   
   char buffer[64];
-  int x = 0;
+  int x = ILI9488_LCD_WIDTH/2;
+  int y = ILI9488_LCD_HEIGHT/2;
+  ili9488_set_foreground_color(COLOR_CONVERT(COLOR_GREEN));
+  ili9488_draw_filled_circle(x, y, 100 );
 
   while (true) {
     if (xQueueReceive( xQueueTouch, &(touch), ( TickType_t )  0 / portTICK_PERIOD_MS)) {
       //printf("Touch em: x:%d y:%d\n", touch.x, touch.y);
     }
     
-    if (xQueueReceive( xQueuePlot, &(plot), ( TickType_t )  100 / portTICK_PERIOD_MS)) {     
+    if (xQueueReceive( xQueuePlot, &(plot), ( TickType_t )  100 / portTICK_PERIOD_MS)) {
+	  coords values_raw = get_coords(80, plot.raw);
+	 // coords values_filter = get_coords(80, plot.filtrado);
  	  ili9488_set_foreground_color(COLOR_CONVERT(COLOR_BLACK));
- 	  ili9488_draw_filled_circle(x, ILI9488_LCD_HEIGHT - plot.raw / 16, 2 );
-	  ili9488_set_foreground_color(COLOR_CONVERT(COLOR_RED));
-	  ili9488_draw_filled_circle(x, ILI9488_LCD_HEIGHT - plot.filtrado / 16, 2 );
-	  if(x <= ILI9488_LCD_WIDTH){
-		x += 5;
-	  } else {
-		  x = 0;
-		  draw_screen();
-	  }
-	  
+ 	  ili9488_draw_filled_circle(x + values_raw.x, (y - values_raw.y), 2 );
+	  ili9488_set_foreground_color(COLOR_CONVERT(COLOR_GREEN));
+	  ili9488_draw_filled_circle(x, y, 100 );
+	   
+
 
     }
   }    
 }
+
+
 
  void task_adc(void){
 
