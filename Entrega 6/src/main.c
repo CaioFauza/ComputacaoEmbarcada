@@ -361,6 +361,18 @@ void task_lcd(void){
  	  ili9488_draw_filled_circle(x + values_raw.x, (y - values_raw.y), 2 );
 	  ili9488_set_foreground_color(COLOR_CONVERT(COLOR_GREEN));
 	  ili9488_draw_filled_circle(x, y, 100 );
+	  
+// 	   ili9488_set_foreground_color(COLOR_CONVERT(COLOR_BLACK));
+// 	   ili9488_draw_filled_circle(x + values_filter.x, (y - values_filter.y), 2 );
+// 	   ili9488_set_foreground_color(COLOR_CONVERT(COLOR_GREEN));
+// 	   ili9488_draw_filled_circle(x, y, 100 );
+
+//    if(x <= ILI9488_LCD_WIDTH){
+// 	    x += 5;
+// 	 } else {
+// 	    x = 0;
+// 	    draw_screen();
+//  }
 	   
 
 
